@@ -13,14 +13,17 @@ $logo_carousel_id = wp_unique_id('image_carousel-');
 
 ?>
 <section class="layout_block logo_carousel <?php echo esc_attr( implode( ' ', $appearance_modifiers ) ); ?> <?php echo esc_attr( $additional_css_classes ); ?>">
-	<div id="<?php echo $logo_carousel_id; ?>" class="owl-carousel">
+	<div class="wrap">
+		<div id="<?php echo $logo_carousel_id; ?>" class="owl-carousel">
 <?php foreach ( $logos as $logo ) { ?>
-		<?php echo wp_get_attachment_image( $logo, 'medium_large', null, array('class' => 'image') ); ?>
+			<?php echo wp_get_attachment_image( $logo, 'medium_large', null, array('class' => 'image') ); ?>
 <?php } ?>
+		</div>
 	</div>
 	
 	<script>
 	jQuery(document).ready(function($){
+		
 		$('#<?php echo $logo_carousel_id; ?>').owlCarousel({
 			responsive: {
 				0: {items: 3},
@@ -37,7 +40,7 @@ $logo_carousel_id = wp_unique_id('image_carousel-');
 			//center: true,
 			dots: false,
 		});
-		
+
 	});
 	</script>
 </section>

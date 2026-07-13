@@ -5,9 +5,8 @@ define('SPM_TEXT_DOMAIN', 'chhoqualitysolutions');
 require_once( get_template_directory() . '/functions/filters.php' );
 require_once( get_template_directory() . '/functions/shortcodes.php' );
 require_once( get_template_directory() . '/functions/tags.php' );
-require_once( get_template_directory() . '/functions/class-wp-nav-menu-widget-with-icons.php' );
-require_once( get_template_directory() . '/functions/walker_nav_menu_wide.php' );
-require_once( get_template_directory() . '/functions/walker_nav_menu_with_icons.php' );
+//require_once( get_template_directory() . '/functions/class-wp-nav-menu-widget-with-icons.php' );
+require_once( get_template_directory() . '/functions/class-wp-widget-recent-posts-with-thumbnails.php' );
 
 if (
 	in_array( 'advanced-custom-fields/acf.php', apply_filters( 'active_plugins', get_option('active_plugins') ) ) ||
@@ -19,7 +18,6 @@ if (
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option('active_plugins') ) ) ) {
 	require_once( get_template_directory() . '/functions/woocommerce.php' );
 	require_once( get_template_directory() . '/functions/class-wc-shortcode-products_carousel.php' );
-	require_once( get_template_directory() . '/functions/class-wc-shortcode-products_with_sidebar.php' );
 }
 
 
@@ -55,7 +53,7 @@ add_action('after_setup_theme', 'spm_after_setup_theme');
 
 /* function spm_init() {
 	
-	// This is where custom post types and taxonomies would be defined if any existed
+	// Define custom post types and taxonomies here
 	
 }
 add_action('init', 'spm_init'); */
@@ -65,9 +63,10 @@ function spm_widgets_init() {
 	
 	// Names of sidebars to create
 	$sidebars = array(
-		array('name' => __( 'Sidebar', SPM_TEXT_DOMAIN ),              'id' => 'sidebar' ),
-		array('name' => __( 'Blog', SPM_TEXT_DOMAIN ),                 'id' => 'blog' ),
-		array('name' => __( 'Shop', SPM_TEXT_DOMAIN ),                 'id' => 'shop' ),
+		array('name' => __( 'Sidebar', SPM_TEXT_DOMAIN ), 'id' => 'sidebar' ),
+		array('name' => __( 'Blog', SPM_TEXT_DOMAIN ),    'id' => 'blog' ),
+		array('name' => __( 'About', SPM_TEXT_DOMAIN ),   'id' => 'about' ),
+		array('name' => __( 'Shop', SPM_TEXT_DOMAIN ),    'id' => 'shop' ),
 	);
 	
 	foreach ($sidebars as $sidebar) {

@@ -20,22 +20,25 @@ if ( empty($columns_per_row) ) $columns_per_row = '3';
 		<div class="columns columns-<?php echo $columns_per_row; ?> columns-top_level">
 <?php foreach ( $columns as $column ) : ?>
 			<div class="column">
-				<div class="title_container">
+				<div class="hover_background"></div>
+				
+				<div class="layer_2">
+					<div class="title_container">
 <?php if ( !empty( $column['icon_css_class'] ) ) { ?>
-					<i class="icon-<?php echo esc_attr( $column['icon_css_class'] ); ?>"></i>
+						<i class="icon-<?php echo esc_attr( $column['icon_css_class'] ); ?>"></i>
 <?php } ?>
-					
+						
 <?php if ( !empty( $column['title'] ) ) { ?>
-					<p class="title"><?php echo $column['title']; ?></p>
+						<p class="title"><?php echo $column['title']; ?></p>
 <?php } ?>
-				</div>
-				
-				<div class="content">
+					</div>
 					
-					<?php if ( !empty( $column['content'] ) ) echo $column['content']; ?>
+					<div class="content">
+						
+						<?php if ( !empty( $column['content'] ) ) echo $column['content']; ?>
+						
+					</div>
 					
-				</div>
-				
 <?php
 $href = '';
 if ( !empty( $column['button_link_type'] ) ) {
@@ -47,10 +50,11 @@ if ( !empty( $column['button_link_type'] ) ) {
 }
 if ( !empty($href) ) {
 ?>
-				<p class="button_container">
-					<a href="<?php echo esc_url( $href ); ?>" class="spm_button"><?php echo !empty( $column['button_text'] ) ? $column['button_text'] : __( 'Learn More', SPM_TEXT_DOMAIN ); ?></a>
-				</p>
+					<p class="button_container">
+						<a href="<?php echo esc_url( $href ); ?>" class="spm_button"><?php echo !empty( $column['button_text'] ) ? $column['button_text'] : __( 'Learn More', SPM_TEXT_DOMAIN ); ?></a>
+					</p>
 <?php } ?>
+				</div>
 			</div>
 <?php endforeach; ?>
 		</div>

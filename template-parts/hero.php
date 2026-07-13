@@ -4,14 +4,12 @@ global $h1_already_used;
 
 $post_id = is_home() || is_archive() ? get_option('page_for_posts') : get_the_ID(); // use ID of page assigned to posts instead when appropriate
 
-if ( get_field('show_breadcrumbs', $post_id) ) {
-	get_template_part('template-parts/hero-breadcrumbs');
-}
-
 if ( get_field('hide_hero', $post_id) ) return;
 
 if ( !empty( get_field('hero_type', $post_id) ) ) {
 	$hero_type = get_field('hero_type', $post_id);
+} else if ( is_home() || is_single() ) {
+	$hero_type = 'two_column';
 } else {
 	$hero_type = 'standard';
 }

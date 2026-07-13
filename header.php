@@ -51,7 +51,7 @@
 <div class="header_container">
 	<div id="announcements" class="hidden">
 		<div class="wrap">
-			<a href="#" aria-label="<?php _e('Close', SPM_TEXT_DOMAIN); ?>" class="close"><i class="icon-close"></i></a>
+			<a href="#" aria-label="<?php _e( 'Close', SPM_TEXT_DOMAIN ); ?>" class="close"><i class="icon-close"></i></a>
 			
 			<p><a href=""><span>Free Download</span> Get the Quality Culture Assessment <i class="icon-arrow-right"></i></a></p>
 		</div>
@@ -64,7 +64,7 @@
 			<div class="logo" itemprop="logo"><a itemprop="url" href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
 			
 			<nav class="nav">
-				<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false, 'menu_class' => 'menu touchscreen_compatible', 'fallback_cb' => false, 'walker' => new SPM_Walker_Nav_Menu_Wide ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false, 'menu_class' => 'menu touchscreen_compatible', 'link_before' => '<span>', 'link_after' => '</span>', 'fallback_cb' => false ) ); ?>
 			</nav>
 			
 			<div class="button_container">

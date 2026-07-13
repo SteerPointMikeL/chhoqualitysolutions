@@ -22,6 +22,12 @@ function spm_excerpt_length_shorter() {
 }
 
 
+function spm_excerpt_more() {
+	return '...';
+}
+add_filter( 'excerpt_more', 'spm_excerpt_more' );
+
+
 // Enable lazy loading by default for certain programatically loaded images (needed for non-Gutenberg templates in WordPress 6.3 or later)
 function spm_get_image_optimization_attributes_enable_lazy_loading_for_templates( $loading_attrs, $tag_name, $attr, $context ) {
 	if ( in_array( $context, array('the_post_thumbnail', 'wp_get_attachment_image') ) && ( !array_key_exists( 'loading', $attr ) || $attr['loading'] === null ) ) {
@@ -42,15 +48,24 @@ function spm_register_post_type_args_exclude_pages( $args, $post_type ) {
 add_filter( 'register_post_type_args', 'spm_register_post_type_args_exclude_pages', 10, 2 );
 
 
-function spm_excerpt_more() {
-	return '...';
-}
-add_filter( 'excerpt_more', 'spm_excerpt_more' );
-
-
 // Disable WordPress gallery inline CSS
 add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 // Scroll page to Gravity Forms confirmation text after submitting form
 add_filter( 'gform_confirmation_anchor', '__return_true' );
+
+
+// Header dropdown menu icon support
+function spm_nav_menu_item_title_icon_support( $title, $menu_item, $args, $depth ) {
+	if ( $args->theme_location === 'header' && $depth === 1 ) {
+		$icon = get_field( 'icon', $menu_item->ID );
+		
+		if ( $icon ) {
+			$title = '<i class="icon-' . $icon . '"></i>' . $title;
+		}
+	}
+	
+	return $title;
+}
+add_filter( 'nav_menu_item_title', 'spm_nav_menu_item_title_icon_support', 10, 4 );

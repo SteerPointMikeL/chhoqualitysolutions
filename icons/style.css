@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?59vn92');
-  src:  url('fonts/icomoon.eot?59vn92#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?59vn92') format('truetype'),
-    url('fonts/icomoon.woff?59vn92') format('woff'),
-    url('fonts/icomoon.svg?59vn92#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?5l7z8e');
+  src:  url('fonts/icomoon.eot?5l7z8e#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5l7z8e') format('truetype'),
+    url('fonts/icomoon.woff?5l7z8e') format('woff'),
+    url('fonts/icomoon.svg?5l7z8e#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -67,11 +67,17 @@
 .icon-arrow-right-circle:before {
   content: "\e917";
 }
+.icon-chevron-left:before {
+  content: "\e921";
+}
 .icon-chevron-right:before {
   content: "\e90a";
 }
 .icon-chevron-down:before {
   content: "\e91b";
+}
+.icon-chevron-up:before {
+  content: "\e920";
 }
 .icon-plus-square:before {
   content: "\e912";
@@ -120,4 +126,13 @@
 }
 .icon-badge-star:before {
   content: "\e91a";
+}
+.icon-lifesaver:before {
+  content: "\e91d";
+}
+.icon-document:before {
+  content: "\e91e";
+}
+.icon-play:before {
+  content: "\e91f";
 }

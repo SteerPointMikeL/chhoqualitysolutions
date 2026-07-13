@@ -16,6 +16,6 @@
 	</div>
 </main>
 
-<?php spm_load_acf_page_sections( get_field('modules') ); ?>
+<?php spm_load_acf_page_sections( get_field('page_sections') ); ?>
 
 <?php get_footer(); ?>

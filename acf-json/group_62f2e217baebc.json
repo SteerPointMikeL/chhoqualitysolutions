@@ -29,32 +29,6 @@
             "custom_choice_button_text": "Add new choice"
         },
         {
-            "key": "field_69fe20bcff9a9",
-            "label": "Breadcrumbs",
-            "name": "show_breadcrumbs",
-            "aria-label": "",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Show breadcrumbs section before hero": "Show breadcrumbs section before hero"
-            },
-            "default_value": [],
-            "return_format": "value",
-            "allow_custom": 0,
-            "allow_in_bindings": 0,
-            "layout": "vertical",
-            "toggle": 0,
-            "save_custom": 0,
-            "custom_choice_button_text": "Add new choice"
-        },
-        {
             "key": "field_62f2e2686b60c",
             "label": "Alternate Page Title",
             "name": "alternate_title",
@@ -175,6 +149,32 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_6a4d577e7f8cd",
+                    "label": "Background",
+                    "name": "background",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium"
                 },
                 {
                     "key": "field_693207cba9831",
@@ -300,6 +300,27 @@
                     "toggle": 0,
                     "save_custom": 0,
                     "custom_choice_button_text": "Add new choice"
+                },
+                {
+                    "key": "field_6a4d57437f8cb",
+                    "label": "Pre-Title",
+                    "name": "pre_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 },
                 {
                     "key": "field_68a6244b89d00",
@@ -428,8 +449,8 @@
                 },
                 {
                     "key": "field_68a66c6b1d195",
-                    "label": "Secondary Title",
-                    "name": "secondary_title",
+                    "label": "Pre-Title",
+                    "name": "pre_title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -678,5 +699,5 @@
     "display_title": "",
     "allow_ai_access": 1,
     "ai_description": "Fields for configuring the appearance of the hero banner that appears on the site's inside pages. The home page uses a separate hero banner with its own associated field group.",
-    "modified": 1778616870
+    "modified": 1783713405
 }

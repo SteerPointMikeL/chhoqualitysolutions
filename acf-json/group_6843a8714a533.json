@@ -3,51 +3,14 @@
     "title": "Menu Options",
     "fields": [
         {
-            "key": "field_6843a9507cf1e",
-            "label": "Sub-Menu Type",
-            "name": "sub_menu_type",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "standard": "Standard",
-                "wide_enhanced": "Wide Enhanced"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
-            "key": "field_69fba666b77ea",
-            "label": "Sub-Menu Heading",
-            "name": "sub_menu_heading",
+            "key": "field_6843a8cf89a18",
+            "label": "Icon",
+            "name": "icon",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6843a9507cf1e",
-                        "operator": "==",
-                        "value": "wide_enhanced"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -57,78 +20,8 @@
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
-            "prepend": "",
+            "prepend": "icon-",
             "append": ""
-        },
-        {
-            "key": "field_6843a872969d6",
-            "label": "Content",
-            "name": "content",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "Special content to display if supported in currently used menu.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_6843a8cf89a18",
-                    "label": "Icon",
-                    "name": "icon",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                },
-                {
-                    "key": "field_69fb930cd65b8",
-                    "label": "Thumbnail",
-                    "name": "thumbnail",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "thumbnail"
-                }
-            ]
         }
     ],
     "location": [
@@ -136,7 +29,7 @@
             {
                 "param": "nav_menu_item",
                 "operator": "==",
-                "value": "all"
+                "value": "location\/header"
             }
         ]
     ],
@@ -152,5 +45,5 @@
     "display_title": "",
     "allow_ai_access": 1,
     "ai_description": "Fields for customizing the appearance of additional content that may appear in drop-down navigation menus. Such content includes an image, short text description, and a linkable button.",
-    "modified": 1778516269
+    "modified": 1783005346
 }

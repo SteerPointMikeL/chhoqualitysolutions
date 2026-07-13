@@ -4,7 +4,7 @@ extract($args);
 
 if ( have_rows('hero_two_column', $post_id) )  the_row();
 ?>
-<section id="hero_plain"<?php if ( get_sub_field('additional_css_classes') ) { ?> class="<?php echo esc_attr( get_sub_field('additional_css_classes') ); ?>"<?php } ?>>
+<section id="hero_two_column"<?php if ( get_sub_field('additional_css_classes') ) { ?> class="<?php echo esc_attr( get_sub_field('additional_css_classes') ); ?>"<?php } ?>>
 	<div class="wrap">
 		<div class="columns columns-2 columns-top_level <?php /* echo !empty( get_sub_field('media_position') ) ? esc_attr( get_sub_field('media_position') ) : 'left'; */ ?>">
 			<div class="column column-1 column-image">
@@ -19,6 +19,10 @@ if ( have_rows('hero_two_column', $post_id) )  the_row();
 			
 			<div class="column column-2 column-content">
 				<div class="title_container">
+<?php if ( get_sub_field('pre_title') ) { ?>
+					<p class="pre_title"><?php the_sub_field('pre_title'); ?></p>
+<?php } ?>
+					
 					<h1 class="page_title"><?php echo $hero_title; ?></h1>
 				</div>
 				

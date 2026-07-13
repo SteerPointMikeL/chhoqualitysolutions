@@ -27,6 +27,19 @@ function spm_load_acf_page_sections($modules) {
 				'content',
 			),
 		),
+		'content_with_background_flourish' => array(	
+			'file' => 'content-with-background-flourish',
+			'fields' => array(
+				'appearance_modifiers',
+				'additional_css_classes',
+				'column_space_distribution',
+				'pre_title',
+				'title',
+				'background_position',
+				'background_type',
+				'content',
+			),
+		),
 		'multi_column' => array(
 			'file' => 'multi-column',
 			'fields' => array(
@@ -38,6 +51,32 @@ function spm_load_acf_page_sections($modules) {
 				'intro_text',
 				'columns_per_row',
 				'columns',
+			),
+		),
+		'multi_column_with_staff_card' => array(
+			'file' => 'multi-column-with-staff-card',
+			'fields' => array(
+				'appearance_modifiers',
+				'additional_css_classes',
+				'image_lightbox_support',
+				'pre_title',
+				'title',
+				'intro_text',
+				'columns_per_row',
+				'display_numbers',
+				'columns',
+				'staff_card',
+			),
+		),
+		'video_carousel' => array(
+			'file' => 'video-carousel',
+			'fields' => array(
+				'appearance_modifiers',
+				'additional_css_classes',
+				'image_lightbox_support',
+				'pre_title',
+				'title',
+				'carousel_items',
 			),
 		),
 		'calls_to_action' => array(
@@ -57,7 +96,9 @@ function spm_load_acf_page_sections($modules) {
 			'fields' => array(
 				'appearance_modifiers',
 				'additional_css_classes',
+				'pre_title',
 				'title',
+				'intro_text',
 			),
 		),
 		'logo_carousel' => array(
@@ -77,21 +118,22 @@ function spm_load_acf_page_sections($modules) {
 				'faqs',
 			),
 		),
-		'interstitial_section' => array(
-			'file' => 'interstitial-section',
+		'contact_form' => array(
+			'file' => 'contact-form',
 			'fields' => array(
 				'appearance_modifiers',
 				'additional_css_classes',
-				'background_image',
-				'image',
 				'pre_title',
 				'title',
-				'content',
-				'buttons',
+				'intro_text',
+				'contact_information',
+				'gravityforms_form_id',
+				'show_title',
+				'show_description',
 			),
 		),
-		'contact_form' => array(
-			'file' => 'contact-form',
+		'contact_form_alternate' => array(
+			'file' => 'contact-form-alternate',
 			'fields' => array(
 				'appearance_modifiers',
 				'additional_css_classes',
@@ -149,7 +191,7 @@ add_filter( 'acf/format_value/type=textarea', 'spm_acf_format_value', 9999 );
 
 
 // Populate ACF FAQs Category dropdown fields with categories from FAQs Options page
-add_filter('acf/load_field/name=faqs_category', function( $field ) {
+/* add_filter('acf/load_field/name=faqs_category', function( $field ) {
 	// clear them out
 	$field['choices'] = array();
 	
@@ -164,7 +206,7 @@ add_filter('acf/load_field/name=faqs_category', function( $field ) {
 	}
 	
 	return $field;
-} );
+} ); */
 
 
 // Populate ACF contact form dropdown fields with Gravity Forms forms

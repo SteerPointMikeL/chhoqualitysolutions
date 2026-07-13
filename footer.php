@@ -24,7 +24,8 @@ wp_enqueue_script( 'jquery-modal' );
 					
 					<div id="newsletter_sign_up" class="modal">
 						
-						<?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+						<div class="_form_11"></div>
+						<script src="https://chhoqualitysolutions.activehosted.com/f/embed.php?id=11" charset="utf-8"></script>
 						
 					</div>
 				</div>
@@ -43,7 +44,7 @@ wp_enqueue_script( 'jquery-modal' );
 			</div></div>
 			
 			<div class="column column-2"><div class="layer_2">
-				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'menu touchscreen_compatible', 'fallback_cb' => null) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'depth' => 1, 'container' => false, 'menu_class' => 'menu touchscreen_compatible', 'fallback_cb' => null) ); ?>
 			</div></div>
 			
 			<div class="column column-3"><div class="layer_2">

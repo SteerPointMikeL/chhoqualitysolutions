@@ -14,17 +14,23 @@
 <?php while ( have_posts() ) : the_post(); ?>
 				<div class="column">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<div class="image_container">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium_large', array('class' => 'image') ); ?></a>
+						<div class="hover_background"></div>
+						
+						<div class="layer_2">
+<?php if ( has_post_thumbnail() ) { ?>
+							<div class="image_container">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium_large', array('class' => 'image') ); ?></a>
+							</div>
+<?php } ?>
+							
+							<p class="title"><?php the_title(); ?></p>
+							
+							<p><?php echo spm_get_the_excerpt_force_trim(); ?></p>
+							
+							<a href="<?php the_permalink(); ?>" class="spm_button alternate">Read More</a>
+							
+							<a href="<?php the_permalink(); ?>" class="full_coverage_link"><?php the_title(); ?></a>
 						</div>
-						
-						<p class="title"><?php the_title(); ?></p>
-						
-						<p><?php echo spm_get_the_excerpt_force_trim(); ?></p>
-						
-						<a href="<?php the_permalink(); ?>" class="spm_button alternate">Read More</a>
-						
-						<a href="<?php the_permalink(); ?>" class="full_coverage_link"><?php the_title(); ?></a>
 					</article>
 				</div>
 <?php endwhile; ?>

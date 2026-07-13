@@ -1,6 +1,6 @@
 <?php
 $page_template_sidebar_mappings = array(
-	'template-filename.php' => 'sidebar_id',
+	'page_-about.php' => 'about',
 );
 ?>
 		

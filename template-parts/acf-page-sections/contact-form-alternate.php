@@ -16,7 +16,7 @@ if ( empty($show_description) ) {
 }
 
 ?>
-<section class="layout_block contact_form <?php echo esc_attr( implode( ' ', $appearance_modifiers ) ); ?> <?php echo esc_attr( $additional_css_classes ); ?>">
+<section class="layout_block contact_form_alternate <?php echo esc_attr( implode( ' ', $appearance_modifiers ) ); ?> <?php echo esc_attr( $additional_css_classes ); ?>">
 	<div class="wrap">
 		<div class="columns columns-2 columns-top_level">
 			<div class="column column-content">
@@ -51,7 +51,7 @@ if ( empty($show_description) ) {
 			
 			<div class="column column-form">
 				<div class="form_container"><div class="layer_2">
-					<p class="title">Contact Us For A Free 30-Minute Consultation</p>
+					<p class="title">Contact CH House of Quality Solutions & Consulting</p>
 					
 <?php if ( !empty($gravityforms_form_id) ) { ?>
 					<?php echo do_shortcode('[gravityforms id="' . $gravityforms_form_id . '" title="' . $show_title . '" description="' . $show_description . '" ajax=true]'); ?>

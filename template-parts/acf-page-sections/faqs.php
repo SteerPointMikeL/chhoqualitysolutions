@@ -20,7 +20,7 @@ $faqs_id = wp_unique_id('faqs_id-');
 		
 		<div id="<?php echo $faqs_id; ?>" class="accordion_container">
 <?php foreach ( $faqs as $faq ) { ?>	
-			<p class="ui-accordion-header question"><i class="icon-plus-circle"></i><i class="icon-minus-circle"></i> <?php echo $faq['question']; ?></p>
+			<p class="ui-accordion-header question"><i class="icon-chevron-down"></i><i class="icon-chevron-up"></i> <?php echo $faq['question']; ?></p>
 			
 			<div class="ui-accordion-content">	
 				<?php echo $faq['answer']; ?>
@@ -31,7 +31,7 @@ $faqs_id = wp_unique_id('faqs_id-');
 		<script>
 		jQuery(document).ready(function($) {
 			$('#<?php echo $faqs_id; ?>').accordion({
-				//active: false,
+				active: false,
 				collapsible: true,
 				heightStyle: 'content',
 				// allow panels to be opened independently
@@ -53,7 +53,7 @@ $faqs_id = wp_unique_id('faqs_id-');
 					// Toggle the panel's header
 					currHeader
 						.toggleClass('ui-corner-all', isPanelSelected)
-						.toggleClass('accordion-header-active ui-state-active ui-corner-top', !isPanelSelected)
+						.toggleClass('ui-accordion-header-active ui-state-active ui-corner-top', !isPanelSelected)
 						.attr('aria-selected', ((!isPanelSelected).toString()));
 					
 					// Toggle the panel's icon
@@ -64,7 +64,7 @@ $faqs_id = wp_unique_id('faqs_id-');
 					// Toggle the panel's content
 					currContent.toggleClass('accordion-content-active',!isPanelSelected)    
 					if (isPanelSelected) { currContent.slideUp(); }  else { currContent.slideDown(); }
-				}
+				},
 			});
 		});
 		</script>
