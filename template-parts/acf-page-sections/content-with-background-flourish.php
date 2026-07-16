@@ -9,7 +9,9 @@ if ( empty($content) ) $content = '';
 
 ?>
 <section class="layout_block content_with_background_flourish <?php echo esc_attr( $background_type ); ?> background_position-<?php echo esc_attr( $background_position ); ?> <?php echo esc_attr( implode( ' ', $appearance_modifiers ) ); ?> <?php echo esc_attr( $additional_css_classes ); ?> <?php echo esc_attr( $column_space_distribution ); ?>">
-	<div class="wrap">
+	<div class="wrap"><div class="layer_2">
+		<div class="background"></div>
+		
 		<div class="overlay"></div>
 		
 		<div class="content_container"><div class="layer_2">
@@ -18,5 +20,5 @@ if ( empty($content) ) $content = '';
 				<?php echo $content; ?>
 				
 		</div></div>
-	</div>
+	</div></div>
 </section>

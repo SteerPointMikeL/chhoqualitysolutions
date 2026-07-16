@@ -8,7 +8,7 @@
 <?php if ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php /* <p class="postmetadata">
-					<em><?php printf( __('By %s', SPM_TEXT_DOMAIN), get_the_author_meta('display_name') ); ?></em> |
+					<em><?php printf( __('By %s', SP_TEXT_DOMAIN), get_the_author_meta('display_name') ); ?></em> |
 					<?php echo get_the_date('F j, Y'); ?> |
 					<?php echo get_the_category_list(', '); ?>
 				</p> */ ?>

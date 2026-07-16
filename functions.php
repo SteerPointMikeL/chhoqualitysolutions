@@ -1,11 +1,10 @@
 <?php
 
-define('SPM_TEXT_DOMAIN', 'chhoqualitysolutions');
+define('SP_TEXT_DOMAIN', 'chhoqualitysolutions');
 
 require_once( get_template_directory() . '/functions/filters.php' );
 require_once( get_template_directory() . '/functions/shortcodes.php' );
 require_once( get_template_directory() . '/functions/tags.php' );
-//require_once( get_template_directory() . '/functions/class-wp-nav-menu-widget-with-icons.php' );
 require_once( get_template_directory() . '/functions/class-wp-widget-recent-posts-with-thumbnails.php' );
 
 if (
@@ -24,7 +23,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 function spm_after_setup_theme() {
 	
 	// Make theme available for translation
-	load_theme_textdomain( SPM_TEXT_DOMAIN, get_template_directory() . '/languages' );
+	load_theme_textdomain( SP_TEXT_DOMAIN, get_template_directory() . '/languages' );
 	
 	// Featured Images
 	add_theme_support( 'post-thumbnails', array('post') );
@@ -38,9 +37,9 @@ function spm_after_setup_theme() {
 	
 	// Menus
 	register_nav_menus( array(
-		'header' => __( 'Header', SPM_TEXT_DOMAIN ),
-		'footer' => __( 'Footer', SPM_TEXT_DOMAIN ),
-		'mobile' => __( 'Mobile', SPM_TEXT_DOMAIN ),
+		'header' => __( 'Header', SP_TEXT_DOMAIN ),
+		'footer' => __( 'Footer', SP_TEXT_DOMAIN ),
+		'mobile' => __( 'Mobile', SP_TEXT_DOMAIN ),
 	) );
 	
 	// Remove global styles and duotone support from frontend
@@ -63,10 +62,11 @@ function spm_widgets_init() {
 	
 	// Names of sidebars to create
 	$sidebars = array(
-		array('name' => __( 'Sidebar', SPM_TEXT_DOMAIN ), 'id' => 'sidebar' ),
-		array('name' => __( 'Blog', SPM_TEXT_DOMAIN ),    'id' => 'blog' ),
-		array('name' => __( 'About', SPM_TEXT_DOMAIN ),   'id' => 'about' ),
-		array('name' => __( 'Shop', SPM_TEXT_DOMAIN ),    'id' => 'shop' ),
+		array('name' => __( 'Sidebar', SP_TEXT_DOMAIN ), 'id' => 'sidebar' ),
+		array('name' => __( 'Blog', SP_TEXT_DOMAIN ),    'id' => 'blog' ),
+		array('name' => __( 'About', SP_TEXT_DOMAIN ),   'id' => 'about' ),
+		array('name' => __( 'Shop', SP_TEXT_DOMAIN ),    'id' => 'shop' ),
+		array('name' => __( 'Single Product', SP_TEXT_DOMAIN ),    'id' => 'single-product' ),
 	);
 	
 	foreach ($sidebars as $sidebar) {
@@ -94,7 +94,7 @@ function spm_enqueue_scripts() {
 	wp_enqueue_style( 'googleapis-fonts', 'https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap' );
 	wp_enqueue_style( 'icomoon', get_template_directory_uri() . '/icons/style.css' );
 	wp_enqueue_style( 'jquery-modal', get_template_directory_uri().'/js/jquery.modal' . $suffix . '.css' );
-	wp_enqueue_style( SPM_TEXT_DOMAIN.'-styles', get_stylesheet_uri() );
+	wp_enqueue_style( SP_TEXT_DOMAIN.'-styles', get_stylesheet_uri() );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
 	
@@ -108,6 +108,6 @@ function spm_enqueue_scripts() {
 	wp_register_script( 'lite-youtube-embed', get_template_directory_uri() . '/js/lite-yt-embed.js', null, '0.3.3', true );
 	wp_register_script( 'lite-vimeo', get_template_directory_uri().'/js/lite-vimeo' . $suffix . '.js', null, '0.1.1', true );
 	
-	wp_enqueue_script( SPM_TEXT_DOMAIN.'-script', get_template_directory_uri().'/js/functions.js', array('jquery', 'js-cookie', 'jquery-modal', 'wow'), null, true );
+	wp_enqueue_script( SP_TEXT_DOMAIN.'-script', get_template_directory_uri().'/js/functions.js', array('jquery', 'js-cookie', 'jquery-modal', 'wow'), null, true );
 }
 add_action('wp_enqueue_scripts', 'spm_enqueue_scripts');

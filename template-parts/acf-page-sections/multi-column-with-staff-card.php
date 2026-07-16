@@ -76,7 +76,7 @@ foreach ( $staff_card['buttons'] as $button ) {
 
 	if ( !empty($href) ) {
 ?>
-					<a href="<?php echo esc_url( $href ); ?>" class="spm_button<?php echo $alternate; ?>"><?php echo !empty( $button['button_text'] ) ? $button['button_text'] : __( 'Learn More', SPM_TEXT_DOMAIN ); ?></a>
+					<a href="<?php echo esc_url( $href ); ?>" class="spm_button<?php echo $alternate; ?>"><?php echo !empty( $button['button_text'] ) ? $button['button_text'] : __( 'Learn More', SP_TEXT_DOMAIN ); ?></a>
 <?php
 	}
 	

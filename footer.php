@@ -69,8 +69,8 @@ wp_enqueue_script( 'jquery-modal' );
 <?php /* <div id="sub_footer">
 	<div class="wrap">		
 		<p class="copyright">
-			<?php printf( __('&copy; Copyright %s %s. All Rights Reserved.', SPM_TEXT_DOMAIN), date( 'Y', current_time('timestamp') ), get_bloginfo('name') ); ?>
-			Website Design by <a href="https://www.steerpoint.com<?php /* ?utm_source=clients&utm_medium=referral&utm_campaign=<?php echo SPM_TEXT_DOMAIN; */ /* ?>" target="_blank">SteerPoint</a>
+			<?php printf( __('&copy; Copyright %s %s. All Rights Reserved.', SP_TEXT_DOMAIN), date( 'Y', current_time('timestamp') ), get_bloginfo('name') ); ?>
+			Website Design by <a href="https://www.steerpoint.com<?php /* ?utm_source=clients&utm_medium=referral&utm_campaign=<?php echo SP_TEXT_DOMAIN; */ /* ?>" target="_blank">SteerPoint</a>
 		</p>
 	</div>
 </div> */ ?>

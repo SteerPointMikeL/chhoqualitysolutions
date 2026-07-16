@@ -1,12 +1,12 @@
 				<div id="comments">
 <?php if ( post_password_required() ) { ?>
-					<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', SPM_TEXT_DOMAIN ); ?></p>
+					<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', SP_TEXT_DOMAIN ); ?></p>
 				</div>
 <?php return; } ?>
 					
 <?php if ( have_comments() ) { ?>
 					<h3 id="comments-title"><?php
-					printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), SPM_TEXT_DOMAIN ),
+					printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), SP_TEXT_DOMAIN ),
 					number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
 					?></h3>
 					
@@ -23,7 +23,7 @@
 <?php } else { ?>
 					
 <?php if ( !comments_open() ) { ?>
-					<p class="nocomments"><?php _e( 'Comments are closed.', SPM_TEXT_DOMAIN ); ?></p>
+					<p class="nocomments"><?php _e( 'Comments are closed.', SP_TEXT_DOMAIN ); ?></p>
 					
 <?php } ?>
 			

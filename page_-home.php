@@ -16,6 +16,8 @@
 	</div>
 <?php } ?>
 	
+	<div class="overlay"></div>
+	
 	<div class="wrap"><div class="layer_2">
 <?php
 if ( get_sub_field('title') ) {
@@ -48,7 +50,7 @@ if ( !empty( get_sub_field('link_type') ) ) {
 
 if ( !empty($href) ) {
 ?>
-					<a href="<?php echo esc_url( $href ); ?>" class="spm_button<?php echo $alternate; ?>"><?php echo get_sub_field('button_text') ? get_sub_field('button_text') : __( 'Learn More', SPM_TEXT_DOMAIN ); ?></a></p>
+					<a href="<?php echo esc_url( $href ); ?>" class="spm_button<?php echo $alternate; ?>"><?php echo get_sub_field('button_text') ? get_sub_field('button_text') : __( 'Learn More', SP_TEXT_DOMAIN ); ?></a></p>
 <?php } ?>
 <?php
 	$alternate = !$alternate ? ' alternate' : '';

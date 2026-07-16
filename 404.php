@@ -6,9 +6,9 @@
 	<div class="wrap">
 		<div id="content">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<h2 class="page_title"><span><?php _e('404 - Page Not Found', SPM_TEXT_DOMAIN); ?></span></h2>
+				<h2 class="page_title"><span><?php _e('404 - Page Not Found', SP_TEXT_DOMAIN); ?></span></h2>
 				
-				<p><?php _e('There was no page found at this URL.', SPM_TEXT_DOMAIN); ?></p>
+				<p><?php _e('There was no page found at this URL.', SP_TEXT_DOMAIN); ?></p>
 			</article>
 		</div>
 	</div>

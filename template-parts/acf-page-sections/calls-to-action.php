@@ -51,7 +51,7 @@ if ( !empty( $column['button_link_type'] ) ) {
 if ( !empty($href) ) {
 ?>
 					<p class="button_container">
-						<a href="<?php echo esc_url( $href ); ?>" class="spm_button"><?php echo !empty( $column['button_text'] ) ? $column['button_text'] : __( 'Learn More', SPM_TEXT_DOMAIN ); ?></a>
+						<a href="<?php echo esc_url( $href ); ?>" class="spm_button"><?php echo !empty( $column['button_text'] ) ? $column['button_text'] : __( 'Learn More', SP_TEXT_DOMAIN ); ?></a>
 					</p>
 <?php } ?>
 				</div>

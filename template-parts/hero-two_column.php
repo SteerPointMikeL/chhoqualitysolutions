@@ -46,7 +46,7 @@ while ( have_rows('buttons') ) : the_row();
 	
 	if ( !empty($href) ) {
 ?>
-					<a href="<?php echo esc_url( $href ); ?>" class="spm_button<?php echo $alternate; ?>"<?php if ( get_sub_field('link_target') ) { ?> target="<?php echo esc_attr( get_sub_field('link_target')[0] ); ?>"<?php } ?>><?php echo get_sub_field('text') ? get_sub_field('text') : __( 'Learn More', SPM_TEXT_DOMAIN ); ?></a>
+					<a href="<?php echo esc_url( $href ); ?>" class="spm_button<?php echo $alternate; ?>"<?php if ( get_sub_field('link_target') ) { ?> target="<?php echo esc_attr( get_sub_field('link_target')[0] ); ?>"<?php } ?>><?php echo get_sub_field('text') ? get_sub_field('text') : __( 'Learn More', SP_TEXT_DOMAIN ); ?></a>
 <?php
 	}
 endwhile;

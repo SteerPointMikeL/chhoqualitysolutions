@@ -16,4 +16,4 @@ if ( ! is_a( $product, WC_Product::class ) || '' === $product->get_price() ) {
 }
 
 ?>
-<span class="price_suffix"><?php echo esc_html( apply_filters( 'spm_price_suffix_label', __( 'one time', SPM_TEXT_DOMAIN ), $product ) ); ?></span>
+<span class="price_suffix"><?php echo esc_html( apply_filters( 'spm_price_suffix_label', __( 'one time', SP_TEXT_DOMAIN ), $product ) ); ?></span>

@@ -10,6 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<hr class="product_divider" />
+<?php /* <hr class="product_divider" /> */ ?>
 
 <div class="product_footer">

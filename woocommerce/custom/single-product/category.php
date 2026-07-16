@@ -1,6 +1,6 @@
 <?php
 /**
- * Product category badge shown over the product loop thumbnail.
+ * Single product category name (e.g. "EBook") shown before the product title.
  *
  * @package WooCommerce\Templates
  */
@@ -16,7 +16,7 @@ $terms = get_the_terms( $product->get_id(), 'product_cat' );
 ?>
 <?php if ( !empty($terms) && !is_wp_error($terms) )  : ?>
 
-	<span class="product_badge"><?php echo esc_html( apply_filters( 'spm_product_category_badge', $terms[0]->name, $product, $terms[0] ) ); ?></span>
+	<p class="pre_title"><?php echo esc_html( apply_filters( 'spm_product_category_badge', $terms[0]->name, $product, $terms[0] ) ); ?></p>
 
 	<?php
 endif;

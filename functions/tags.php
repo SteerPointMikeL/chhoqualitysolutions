@@ -45,14 +45,14 @@ function spm_pagination($before = '', $after = '') {
 	// first page link
 	/* if ( $start_page >= 2 && $displayed_range < $total_pages ) {
 ?>
-	<li><a href="<?php echo get_pagenum_link(); ?>"><i class="icon-arrow-left"></i> <?php _e('First', SPM_TEXT_DOMAIN); ?></a></li>
+	<li><a href="<?php echo get_pagenum_link(); ?>"><i class="icon-arrow-left"></i> <?php _e('First', SP_TEXT_DOMAIN); ?></a></li>
 <?php
 	} */
 	
 	// previous page link
 	if ( $current_page >= 2 ) {
 ?>
-	<li aria-label="<?php _e( 'Previous', SPM_TEXT_DOMAIN ); ?>"><?php previous_posts_link( '<i class="icon-double-arrow-left"></i>' ); ?></li>
+	<li aria-label="<?php _e( 'Previous', SP_TEXT_DOMAIN ); ?>"><?php previous_posts_link( '<i class="icon-double-arrow-left"></i>' ); ?></li>
 <?php
 	}
 	
@@ -72,20 +72,20 @@ function spm_pagination($before = '', $after = '') {
 	// next page link
 	if ( $current_page < $total_pages ) {
 ?>
-	<li aria-label="<?php _e( 'Next', SPM_TEXT_DOMAIN ); ?>"><?php next_posts_link( '<i class="icon-double-arrow-right"></i>' ); ?></li>
+	<li aria-label="<?php _e( 'Next', SP_TEXT_DOMAIN ); ?>"><?php next_posts_link( '<i class="icon-double-arrow-right"></i>' ); ?></li>
 <?php
 	}
 
 	// last page link
 	/* if ($end_page < $total_pages) {
 ?>
-	<li><a href="<?php echo get_pagenum_link( $total_pages ); ?>"><?php _e( 'Last', SPM_TEXT_DOMAIN ); ?> <i class="icon-arrow-right"></i></a></li>
+	<li><a href="<?php echo get_pagenum_link( $total_pages ); ?>"><?php _e( 'Last', SP_TEXT_DOMAIN ); ?> <i class="icon-arrow-right"></i></a></li>
 <?php
 	} */
 ?>
 </ul>
 
-<?php //printf( __( 'Page %1$d of %2$d', SPM_TEXT_DOMAIN ), $current_page, $total_pages ); ?>
+<?php //printf( __( 'Page %1$d of %2$d', SP_TEXT_DOMAIN ), $current_page, $total_pages ); ?>
 <?php
 	echo $after."\n";
 }

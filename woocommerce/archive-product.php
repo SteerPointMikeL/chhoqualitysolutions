@@ -19,6 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
+get_template_part('template-parts/hero');
+
 /**
  * Hook: woocommerce_before_main_content.
  *

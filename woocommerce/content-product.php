@@ -37,7 +37,7 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	 * Hook: woocommerce_before_shop_loop_item_title.
 	 *
 	 * @hooked spm_woocommerce_template_loop_product_thumbnail_open - 5 (SteerPoint Note: added)
-	 * @hooked spm_woocommerce_show_product_loop_in_stock_ribbon - 5 (SteerPoint Note: added)
+	 * @hooked spm_woocommerce_template_loop_category_badge - 6 (SteerPoint Note: added)
 	 * @hooked woocommerce_show_product_loop_sale_flash - 10
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 * @hooked spm_woocommerce_template_loop_product_thumbnail_close - 15 (SteerPoint Note: added)
@@ -54,9 +54,9 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	/**
 	 * Hook: woocommerce_after_shop_loop_item_title.
 	 *
+	 * @hooked spm_woocommerce_template_loop_short_description - 3
 	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked spm_woocommerce_template_loop_brand - 5 (SteerPoint Note: added)
-	 * @hooked woocommerce_template_loop_price - 10
+	 * @hooked woocommerce_template_loop_price - 10 (SteerPoint Note: removed)
 	 */
 	do_action( 'woocommerce_after_shop_loop_item_title' );
 
@@ -64,7 +64,11 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	 * Hook: woocommerce_after_shop_loop_item.
 	 *
 	 * @hooked woocommerce_template_loop_product_link_close - 5
+	 * @hooked spm_woocommerce_template_loop_footer_open - 6 (SteerPoint Note: added)
+	 * @hooked woocommerce_template_loop_price - 8 (SteerPoint Note: added)
+	 * @hooked spm_woocommerce_template_loop_price_suffix - 9 (SteerPoint Note: added)
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
+	 * @hooked spm_woocommerce_template_loop_footer_close - 20 (SteerPoint Note: added)
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>

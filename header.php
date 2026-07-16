@@ -51,7 +51,7 @@
 <div class="header_container">
 	<div id="announcements" class="hidden">
 		<div class="wrap">
-			<a href="#" aria-label="<?php _e( 'Close', SPM_TEXT_DOMAIN ); ?>" class="close"><i class="icon-close"></i></a>
+			<a href="#" aria-label="<?php _e( 'Close', SP_TEXT_DOMAIN ); ?>" class="close"><i class="icon-close"></i></a>
 			
 			<p><a href=""><span>Free Download</span> Get the Quality Culture Assessment <i class="icon-arrow-right"></i></a></p>
 		</div>
@@ -59,7 +59,7 @@
 	
 	<header id="header">
 		<div class="wrap">
-			<a id="spm_responsive_menu_button" href="#" role="button" aria-label="<?php _e( 'Menu', SPM_TEXT_DOMAIN ); ?>"><i class="icon-menu"></i></a>
+			<a id="spm_responsive_menu_button" href="#" role="button" aria-label="<?php _e( 'Menu', SP_TEXT_DOMAIN ); ?>"><i class="icon-menu"></i></a>
 			
 			<div class="logo" itemprop="logo"><a itemprop="url" href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
 			
@@ -73,7 +73,7 @@
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option('active_plugins') ) ) ) {
 	$count = WC()->cart->get_cart_contents_count();
 ?>
-				<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart', SPM_TEXT_DOMAIN); ?>" class="spm_button alternate square_padding">
+				<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart', SP_TEXT_DOMAIN); ?>" class="spm_button alternate square_padding">
 					<i class="icon-cart"></i> <?php if ( $count > 0 ) { ?><span class="quantity"><?php echo $count; ?></span><?php } ?>
 				</a>
 <?php } ?>

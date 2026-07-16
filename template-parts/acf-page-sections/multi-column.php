@@ -72,7 +72,7 @@ if ( !empty( $column['link_type'] ) ) {
 
 if ( !empty($href) ) {
 ?>
-					<p class="button_container"><a href="<?php echo esc_url( $href ); ?>" class="spm_button"><?php echo !empty( $column['button_text'] ) ? $column['button_text'] : __( 'Learn More', SPM_TEXT_DOMAIN ); ?></a></p>
+					<p class="button_container"><a href="<?php echo esc_url( $href ); ?>" class="spm_button"><?php echo !empty( $column['button_text'] ) ? $column['button_text'] : __( 'Learn More', SP_TEXT_DOMAIN ); ?></a></p>
 					
 <?php if ( in_array( 'grey_columns', $appearance_modifiers) || str_contains('grey_columns', $additional_css_classes) ) { ?>
 					<a href="<?php echo esc_url( $href ); ?>" class="full_coverage_link"><?php echo !empty( $column['title'] ) ? strip_tags( preg_replace('/<br *\/? *>+/i', ' ', $column['title'] ) ) : '&nbsp;'; ?></a>
